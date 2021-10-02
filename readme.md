@@ -4,7 +4,7 @@ Esse projeto impelementa uma infraestrutura de segurança (autenticação e auto
 
 ## Backend
 
-*****Atenção**, você precisa renomear o arquivo `.env__exemplo` para `.env` modificando respectivos os atributos de configuração para o seu projeto (principalmente no que diz respeito à configuração do servidor de email).
+**Atenção**, você precisa renomear o arquivo `.env__exemplo` para `.env` modificando respectivos os atributos de configuração para o seu projeto (principalmente no que diz respeito à configuração do servidor de email).
 
 Para executar: 
 ```
