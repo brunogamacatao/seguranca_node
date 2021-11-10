@@ -10,8 +10,10 @@ router.get('/', async (req, res) => {
 
 // Cadastra um usuário
 router.post('/', async (req, res) => {
+  const {email, senha} = req.body;
+
   try {
-    const novo = await new Usuario(req.body).save();
+    const novo = await new Usuario({email, senha}).save();
     ValidacaoService.enviaEmailValidacao(novo);
     res.status(201).json(novo);
   } catch (e) {

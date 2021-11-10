@@ -1,0 +1,19 @@
+version: '3.6'  
+services:
+  front:
+    image: brunogamacatao/seguranca_front
+    ports:
+      - "9999:80"
+    depends_on:
+      - back
+  back:
+    image: brunogamacatao/seguranca_back
+    environment:
+      - DATABASE_URL=mongodb://banco/seguranca
+      - SERVER_PORT=5000
+    ports:
+      - "5000:5000"
+    depends_on:
+      - banco
+  banco:
+    image: mongo
